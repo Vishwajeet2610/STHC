@@ -72,7 +72,7 @@ def rk4( f, Tinw, x ):
     n = len( x )
     T = numpy.array( [ T0 ] * n )
     f=-(const)*(Tinw-T)
-    for i in xrange( n - 1 ):
+    for i in Trange( n - 1 ):
         h = x[i+1] - x[i]
         k1 = h * f( T[i], x[i] )
         k2 = h * f( T[i] + 0.5 * k1, x[i] + 0.5 * h )
